@@ -12,12 +12,12 @@ class Changer
 
         def self.make_change(num)
         change = []
-        quarters = num / 25
-        remaining = num % 25
-        dimes = remaining / 10
-        remaining = remaining - (dimes * 10)
-        nickels = remaining / 5
-        remaining = remaining - (nickels * 5)
+        quarters = num / QUARTER
+        remaining = num % QUARTER
+        dimes = remaining / DIME
+        remaining = remaining - (dimes * DIME)
+        nickels = remaining / NICKEL
+        remaining = remaining - (nickels * NICKEL)
         pennies = remaining
 
          # rough_minutes = @seconds / 60
